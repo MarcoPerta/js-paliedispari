@@ -29,7 +29,7 @@ function palindroma(parola){
     }
 }
 
-if(true){
+if(palindroma(parola)){
     console.log('la parola è palindroma')
 }else{
     console.log('la parola non è palindroma')

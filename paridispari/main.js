@@ -29,17 +29,18 @@ console.log(nrandom);
 let somma = nutente + nrandom ; 
 console.log(somma)
 
-let vittoria = false;
+// let vittoria = false;
 
 function pariOdispari(somma){
+
+    let vittoria = false;
+
     if(somma % 2 === 0){
-        vittoria = true; 
+        return true; 
     }
 }
 
-pariOdispari(somma)
-
-if(vittoria ){
+if(pariOdispari(somma)){
     alert("hai vinto")
     console.log('vinto')
 }

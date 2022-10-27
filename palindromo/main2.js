@@ -2,35 +2,38 @@
 // Chiedere all’utente di inserire una parola
 // Creare una funzione per capire se la parola inserita è palindroma
 
+// -prompt inserire parola
+// funzione
+// dentro : fare variabile soldatino
+// stabilire for per parola al contrario
+// equiparare le due parole se sono uguali true
+// fuori funzione stabilire se è o non è palindroma
+
+
 let parola = prompt('inserisci parola')
 console.log(parola);
 
-let parolaAlcontario = '';
+function palindroma(parola){
 
-for (let i=parola.length -1; i >= 0; i--){
+    let verifica= false;
+
+    let parolaAlcontario = '';
+
+    for (let i=parola.length -1; i >= 0; i--){
     parolaAlcontario += parola[i];
-}
-console.log(`${parolaAlcontario}`);
+    }
+    console.log(`${parolaAlcontario}`);
 
-let verifica= false;
-
-function palindroma(){
     if(parola===parolaAlcontario){
-        verifica=true;
+        return true
     }
 }
 
-if(verifica){
+if(true){
     console.log('la parola è palindroma')
 }else{
     console.log('la parola non è palindroma')
 }
 
-// metodo2
-// function palindroma(){
-//     if(parola===parolaAlcontario){
-//     }
-// }
 
-// let verifica = palindroma();
-// console.log('la parola è palindroma')
+

@@ -8,30 +8,43 @@
 // -prompt per scegliere numero dall'utente e pari o diri
 // -creo una funzione per generare numero random da 1 a 5
 // -creo somma per sommare n utente e n random 
-// -in una funzione stabilisco se il n trovato è pari o dispari
+// -creo variabile soldatino
+// -funzione per impostare variabile soldatino
 // -dichiarare chi ha vinto
 
-let nutente = prompt('inserisci numero da 1 a 5');
+let paridispari = prompt('pari o dispari?');
+console.log(paridispari);
+
+let nutente = parseInt(prompt('inserisci numero da 1 a 5'));
 console.log(nutente);
 
-function generaNrandom(num1){
-    let random = (Math.round((Math.random()*5)+1));
-    num1 = random;
+function generaNrandom(){
+    let random = Math.round((Math.random()*5)+1);
     return random;
 }
 
-let nrandom = generaNrandom(num1);
+let nrandom = generaNrandom();
 console.log(nrandom);
 
-// let somma = nutente + nrandom ; 
-// console.log(somma)
+let somma = nutente + nrandom ; 
+console.log(somma)
 
-// function pariOdispari(){
-//     if(somma % 2 = 0){
-//         console.log('numero pari')
-//     }
-//     else{
-//         console.log('numero dispari')
-//     }
-// }
+let vittoria = false;
+
+function pariOdispari(somma){
+    if(somma % 2 === 0){
+        vittoria = true; 
+    }
+}
+
+pariOdispari(somma)
+
+if(vittoria ){
+    alert("hai vinto")
+    console.log('vinto')
+}
+else{
+    alert("hai perso") 
+    console.log('perso')
+}
 
